@@ -8,8 +8,11 @@ defmodule Pidgeot.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
-      # Starts a worker by calling: Pidgeot.Worker.start_link(arg)
-      # {Pidgeot.Worker, arg}
+      Plug.Cowboy.child_spec(
+        scheme: :http,
+        plug: Pidgeot.Endpoint,
+        options: [port: 4001]
+      )
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
