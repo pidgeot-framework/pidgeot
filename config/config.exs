@@ -21,10 +21,7 @@ use Mix.Config
 #     config :logger, level: :info
 #
 
-config :pidgeot,
-  port: 4000,
-  intent_map_module: Pidgeot.IntentMap,
-  actions_module: Pidgeot.Actions
+config :pidgeot, port: 4000
 
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment
