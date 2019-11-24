@@ -23,7 +23,6 @@ defmodule Pidgeot.MixProject do
   defp deps do
     [
       {:plug_cowboy, "~> 2.1"},
-      {:poison, "~> 4.0"},
       {:pidgeot_core, path: "../pidgeot_core"}
     ]
   end
